@@ -1,29 +1,9 @@
 <script lang="ts">
     import CardProjeto from "$lib/CardProjeto.svelte";
+    import { projetos } from "$lib/stores/valores";
+    import { valor } from "$lib/stores/valores";
 
-    class Recentes {
-        titulo: string;
-        subTitulo: string;
-        conteudo: string;
-
-        constructor(titulo: string, subTitulo: string, conteudo: string) {
-            this.titulo = titulo;
-            this.subTitulo = subTitulo;
-            this.conteudo = conteudo;
-        }
-    }
-
-    let ultimoPost: Recentes = new Recentes(
-        "Titulo do post",
-        "Subtitulo do post",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nostrum nihil delectus eos, ipsam et totam laborum voluptates dolorem quibusdam! Deserunt libero corrupti et perferendis?",
-    );
-
-    let penultimoPost: Recentes = new Recentes(
-        "Titulo do post 2",
-        "Subtitulo do post 2",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nostrum nihil delectus eos, ipsam et totam laborum voluptates dolorem quibusdam! Deserunt libero corrupti et perferendis?",
-    );
+    
 </script>
 
 <div id="area">
@@ -31,19 +11,16 @@
         <div id="introducao">
             <div id="nav-menu">
                 <ul>
-                    <a href="#area">inicio</a>
-                    <a href="#area">blog</a>
-                    <a href="#area">contato</a>
+                    <a href="#area" style="color:rgb(181 128 128)">inicio</a>
+                    <a href="/blog">blog</a>
+                    <a href="#contato">contato</a>
                 </ul>
             </div>
             <div id="apresentacao">
                 <div id="info-intro">
                     <h1>Dayvson</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Temporibus nostrum nihil delectus eos, ipsam et totam
-                        laborum voluptates dolorem quibusdam! Deserunt libero
-                        corrupti et perferendis?
+                        Olá! Me chamo Dayvson e gosto de programar. Criei este espaço para mostrar meus projetos e escrever um pouco sobre o que vou aprendendo.
                     </p>
                     <button>baixar cv</button>
                 </div>
@@ -56,52 +33,87 @@
             <div id="nav-recentes">
                 <ul id="lista-nav-recentes">
                     <a href="#area">ultimos Posts</a>
-                    <a href="#area">ver todos</a>
+                    <a href="/blog">ver todos</a>
                 </ul>
             </div>
             <div id="recentes-conteudo">
-                <div class="novos-posts">
-                    <h1>{ultimoPost.titulo}</h1>
-                    <h3>{ultimoPost.subTitulo}</h3>
-                    <p>{ultimoPost.conteudo}</p>
-                </div>
-                <div class="novos-posts">
-                    <h1>{penultimoPost.titulo}</h1>
-                    <h3>{penultimoPost.subTitulo}</h3>
-                    <p>{penultimoPost.conteudo}</p>
-                </div>
+                <a href={$valor[0].site} style="margin:0">
+                    <div class="novos-posts">
+                        <h1>{$valor[0].titulo}</h1>
+                        <h3>{$valor[0].manchete}</h3>
+                        <p>{$valor[0].conteudo}</p>
+                    </div>
+                </a>
+
+                <a href={$valor[0].site} style="margin:0">
+                    <div class="novos-posts">
+                        <h1>{$valor[1].titulo}</h1>
+                        <h3>{$valor[1].manchete}</h3>
+                        <p>{$valor[1].conteudo}</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div id="projetos">
             <div id="projetos-titulo">
                 <p>meus projetos</p>
             </div>
-            <CardProjeto
-                imagem="img-ttoj.png"
-                titulo="json_conversor"
-                subtitulo="TYPESCRIPT"
-                descricao="Este projeto é um conversor de arquivos, em que ele pega um arquivo .txt e o formata para .json - com objetos e suas chaves já pré-definidas."
-                link_repo="#https://github.com/Devs097518/json_conversor"
-                link_info="#"
-                link_site="#"
-            />
+            <button
+                class="projeto-clicado"
+                onmousedown={() => ($projetos[0].selecionado = 1)}
+            >
+                <CardProjeto
+                    imagem="img-conta.png"
+                    titulo="{$projetos[1]?.titulo ?? ''}"
+                    subtitulo=" "
+                    descricao="{$projetos[1]?.descricao ?? ''}"
+                    link_repo="{$projetos[1]?.github ?? ''}"
+                    link_info="/projetos"
+                    link_site="{$projetos[1]?.site ?? ''}"
+                />
+            </button>
 
-            <CardProjeto
-                imagem="img-conta.png"
-                titulo="checar-cadastro"
-                subtitulo="TYPESCRIPT"
-                descricao="Esse projeto é um validador de contas, em que se é possível criar sua conta apenas quando todos os campos são preenchidos de forma correta."
-                link_repo="https://github.com/Devs097518/checar_cadastro"
-                link_info="#"
-                link_site="https://checar-cadastro.vercel.app/"
-            />
+            <button
+                class="projeto-clicado"
+                onmousedown={() => ($projetos[0].selecionado = 2)}
+            >
+                <CardProjeto
+                    imagem="img-conta.png"
+                    titulo="{$projetos[2]?.titulo ?? ''}"
+                    subtitulo=" "
+                    descricao="{$projetos[2]?.descricao ?? ''}"
+                    link_repo="{$projetos[2]?.github ?? ''}"
+                    link_info="/projetos"
+                    link_site="{$projetos[2]?.site ?? ''}"
+                />
+            </button>
+
+
+            <button
+                class="projeto-clicado"
+                onmousedown={() => ($projetos[0].selecionado = 3)}
+            >
+                <CardProjeto
+                    imagem="img-conta.png"
+                    titulo="{$projetos[3]?.titulo ?? ''}"
+                    subtitulo=" "
+                    descricao="{$projetos[3]?.descricao ?? ''}"
+                    link_repo="{$projetos[3]?.github ?? ''}"
+                    link_info="/projetos"
+                    link_site="{$projetos[3]?.site ?? ''}"
+                />
+            </button>
+
+
         </div>
         <div id="contato">
-            <a href="mailto:dayvsonnlacerda360@gmail.com?subject=Ol%C3%A1+Dayvson!">
-                <img src="ctt-email.png" alt="" class="img-contato">
+            <a
+                href="mailto:dayvsonnlacerda360@gmail.com?subject=Ol%C3%A1+Dayvson!"
+            >
+                <img src="ctt-email.png" alt="" class="img-contato" />
             </a>
             <a href="https://github.com/Devs097518">
-                <img src="ctt-github.png" alt="" class="img-contato">
+                <img src="ctt-github.png" alt="" class="img-contato" />
             </a>
         </div>
     </div>
@@ -110,7 +122,7 @@
 <style>
     :global(:root) {
         font-family: monospace;
-        background-image: radial-gradient(#89914157 1px , transparent 1px);
+        background-image: radial-gradient(#89914157 1px, transparent 1px);
         background-size: 10px 10px;
     }
 
@@ -132,7 +144,7 @@
     #apresentacao {
         display: flex;
         padding: 2em;
-        
+
         border-bottom: 1px solid black;
     }
 
@@ -160,7 +172,7 @@
         width: 100%;
         min-height: 10em;
         border-bottom: 1px solid black;
-        background-color: #edc9ee;
+        background-color: rgb(240, 214, 214);
     }
 
     #recentes-conteudo {
@@ -168,7 +180,6 @@
     }
 
     .novos-posts {
-        width: 100%;
         padding: 2em;
         min-height: 20em;
         background-color: white;
@@ -176,10 +187,11 @@
 
     :hover.novos-posts {
         background-color: rgb(255, 255, 255);
-        width: 100%;
         padding: 2em;
         min-height: 20em;
-        border: 1px solid black;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
     }
 
     #lista-nav-recentes {
@@ -193,10 +205,15 @@
         min-height: 10em;
     }
 
+    .projeto-clicado {
+        border: none;
+        background-color: transparent;
+    }
+
     #projetos-titulo {
         display: flex;
         justify-content: space-between;
-        background-color: #edc9ee;
+        background-color: rgb(240, 214, 214);
         padding: 0 2em;
     }
 
@@ -206,10 +223,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background-color: rgb(243, 200, 255); */
     }
 
-    .img-contato{
+    .img-contato {
         width: 2em;
         height: auto;
     }

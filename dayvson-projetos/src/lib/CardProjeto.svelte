@@ -6,6 +6,7 @@
     export let link_repo: string;
     export let link_info: string;
     export let link_site: string;
+
 </script>
 
 <div class="cardprojeto">
@@ -18,13 +19,13 @@
         <p class="iten-info">{descricao}</p>
         <div>
             <a href={link_info}>
-                <button>info</button>
+                <button class="botao">info</button>
             </a>
             <a href={link_repo}>
-                <button>repositório</button>
+                <button class="botao">repositório</button>
             </a>
             <a href={link_site}>
-                <button>visitar</button>
+                <button class="botao">visitar</button>
             </a>
         </div>
     </div>
@@ -35,7 +36,10 @@
         display: flex;
         width: 90%;
         align-items: center;
-        background-color: rgb(255, 253, 227);
+        border-radius: 10px;
+        border: 4px double rgb(119, 111, 111);
+        background-color: rgba(255, 255, 255, 0.13);
+        box-shadow: 5px 5px 25px 5px rgb(248, 248, 248);
         margin: 2em;
     }
 
@@ -56,5 +60,25 @@
 
     h1 {
         margin: 0;
+    }
+    .botao{
+        width: 100px;
+        border: none;
+        border-radius: 10px; 
+        font-weight: 1000;
+        background-color: white;
+        color: rgba(61, 58, 109, 0.849);
+        cursor: pointer;
+    }
+
+    :hover.botao{
+        width: 100px;
+        border: none;
+        border-radius: 10px; 
+        font-weight: 1000;
+        
+        background-color: rgba(61, 58, 109, 0.849);
+        color: white;
+        cursor: pointer;
     }
 </style>
