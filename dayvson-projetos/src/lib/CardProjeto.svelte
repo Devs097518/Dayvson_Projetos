@@ -21,10 +21,10 @@
             <a href={link_info}>
                 <button class="botao">info</button>
             </a>
-            <a href={link_repo}>
+            <a href={link_repo} target='_blank'>
                 <button class="botao">repositório</button>
             </a>
-            <a href={link_site}>
+            <a href={link_site} target='_blank'>
                 <button class="botao">visitar</button>
             </a>
         </div>

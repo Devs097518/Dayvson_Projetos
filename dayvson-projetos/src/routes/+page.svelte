@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div id="recentes-conteudo">
-                <a href={$valor[0].site} style="margin:0">
+                <a href={$valor[0].site} style="margin:0" target='_blank'>
                     <div class="novos-posts">
                         <h1>{$valor[0].titulo}</h1>
                         <h3>{$valor[0].manchete}</h3>
@@ -45,7 +45,7 @@
                     </div>
                 </a>
 
-                <a href={$valor[0].site} style="margin:0">
+                <a href={$valor[0].site} style="margin:0" target='_blank'>
                     <div class="novos-posts">
                         <h1>{$valor[1].titulo}</h1>
                         <h3>{$valor[1].manchete}</h3>
@@ -63,7 +63,7 @@
                 onmousedown={() => ($projetos[0].selecionado = 1)}
             >
                 <CardProjeto
-                    imagem="img-conta.png"
+                    imagem="{$projetos[1]?.imagem ?? ''}"
                     titulo="{$projetos[1]?.titulo ?? ''}"
                     subtitulo=" "
                     descricao="{$projetos[1]?.descricao ?? ''}"
@@ -78,7 +78,7 @@
                 onmousedown={() => ($projetos[0].selecionado = 2)}
             >
                 <CardProjeto
-                    imagem="img-conta.png"
+                    imagem="{$projetos[2]?.imagem ?? ''}"
                     titulo="{$projetos[2]?.titulo ?? ''}"
                     subtitulo=" "
                     descricao="{$projetos[2]?.descricao ?? ''}"
@@ -94,7 +94,7 @@
                 onmousedown={() => ($projetos[0].selecionado = 3)}
             >
                 <CardProjeto
-                    imagem="img-conta.png"
+                    imagem="{$projetos[3]?.imagem ?? ''}"
                     titulo="{$projetos[3]?.titulo ?? ''}"
                     subtitulo=" "
                     descricao="{$projetos[3]?.descricao ?? ''}"
@@ -181,14 +181,14 @@
 
     .novos-posts {
         padding: 2em;
-        min-height: 20em;
+        min-height: 35em;
         background-color: white;
     }
 
     :hover.novos-posts {
         background-color: rgb(255, 255, 255);
         padding: 2em;
-        min-height: 20em;
+        min-height: 35em;
         border-top: 1px solid black;
         border-left: 1px solid black;
         border-right: 1px solid black;

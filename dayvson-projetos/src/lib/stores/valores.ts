@@ -2,12 +2,11 @@ import { writable } from 'svelte/store';
 export const valor = writable(
     [
         {
-            titulo: 'Como fazer clonagem de um projeto do GitHub',
-            manchete: 'publicado em 13/09/2025 | Github | Git | Clonar Repositório',
-            conteudo: ' O GitHub é um lugar onde todos os programadores e desenvolvedores hospedam seus projetos, sendo possível visualizar as alterações dos códigos, e uma das coisas mais interessantes: poder clonar um projeto (daqueles que estão disponíveis ao público), e assim poder fazer testes mais precisos e até colaborar com algo do projeto original.',
-            site: 'https://webrootinfo.blogspot.com/2025/09/como-fazer-clonagem-de-um-projeto-do.html'
-        },
-
+            titulo: 'Proteção de dados de variáveis com o .env',
+            manchete: 'publicado em 18/09/2025 | Github | .env | Segurança de variáveis de ambiente',
+            conteudo: 'Haverá muitos momentos em que você irá criar projetos que esses possuem dados confidenciais, e caso esses dados estiverem à amostra para o público, haverá problemas futuros, como o vazamento da URI do seu banco de dados(qualquer um gastando o seu armazenamento)  ou a chave da sua API(gastando o seu limite de requisições).',
+            site: 'https://webrootinfo.blogspot.com/2025/09/protecao-de-dados-de-variaveis-com-o-env.html'
+        },  
         {
             titulo: 'Como fazer clonagem de um projeto do GitHub',
             manchete: 'publicado em 13/09/2025 | Github | Git | Clonar Repositório',
@@ -26,7 +25,7 @@ export const projetos = writable(
 
         {
             titulo: 'JSON Conversor',
-            imagem: 'projetogif.gif',
+            imagem: 'conversao.png',
             descricao: 'O JSON_CONVERSOR é um projeto que tem como objetivo formular arquivos `.json` , arquivos muito muito úteis no backend para acessar e distribuir dados , de uma maneira simples . Quando um arquivo `.txt` com a formatação requerida é aplicado no programa , um arquivo  `.json` é criado , e cada informação do `.txt` é adicionado a um objeto anônimo.',
             tecnologias: ['Sveltekit', 'Typescript', 'Git'],
             funcionalidades: ['Captura de arquivos exclusivamente .txt', 'Opção de baixar disponível apenas após a conversão', 'Responsividade para telas pequenas e grandes'],
@@ -35,8 +34,8 @@ export const projetos = writable(
             site: 'json-conversor.vercel.app'
         },
         {
-            titulo: 'Jornal Diario',
-            imagem: 'projetogif.gif',
+            titulo: 'Jornal Diário',
+            imagem: 'jornal.png',
             descricao: 'O Jornal Diário é uma aplicação de notícias que tem como função te deixar informado sobre o Brasil e o mundo, sobre os mais variádos temas, consumindo os dados de um servidor externo.',
             tecnologias: ['Sveltekit','JavaScript', 'Git', 'Express.js', 'Node.js','Vercel','Render','PostMan'],
             funcionalidades: ['Receber filtros para pesquisa de notícias', 'Utilização de um proxy para fazer requisições à API, evitando problemas de CORS', 'Mensagens de status da requisição','Adaptação à telas pequenas e grandes'],
@@ -46,7 +45,7 @@ export const projetos = writable(
         },
         {
             titulo: 'Encurtador de URL',
-            imagem: 'projetogif.gif',
+            imagem: 'encurtador.png',
             descricao: 'O ENCURTADOR_DE_URL tem a função de pegar uma URL longa e criar uma URL pequena que nos redirenciona para o seu caminho original.',
             tecnologias: ['JavaScript', 'Express.js', 'Node.js','MongoDB', 'Mongoose' ,'Vercel','Git','REQBIN'],
             funcionalidades: ['Capturar o link da caixa de entrada e retornar um link curto'],
