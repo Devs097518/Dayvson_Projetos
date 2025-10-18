@@ -24,7 +24,7 @@
             <a href={link_repo} target='_blank'>
                 <button class="botao">repositório</button>
             </a>
-            <a href={link_site} target='_blank'>
+            <a href={`https://${link_site}`} target='_blank'>
                 <button class="botao">visitar</button>
             </a>
         </div>
@@ -71,7 +71,7 @@
         cursor: pointer;
     }
 
-    :hover.botao{
+    .botao:hover{
         width: 100px;
         border: none;
         border-radius: 10px; 

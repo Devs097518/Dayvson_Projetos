@@ -25,7 +25,7 @@
                     <button>baixar cv</button>
                 </div>
                 <div id="img-intro">
-                    <img id="img-intro" src="perfil-teste.jpg" alt="" />
+                    <img id="img-intro" src="perfil-2.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -156,6 +156,7 @@
     #img-intro {
         width: 12em;
         height: auto;
+        
     }
 
     #nav-menu {
