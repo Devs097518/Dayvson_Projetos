@@ -22,7 +22,7 @@
                     <p>
                         Olá! Me chamo Dayvson e gosto de programar. Criei este espaço para mostrar meus projetos e escrever um pouco sobre o que vou aprendendo.
                     </p>
-                    <button>baixar cv</button>
+                    <!-- <button>baixar cv</button> -->
                 </div>
                 <div id="img-intro">
                     <img id="img-intro" src="perfil-2.jpg" alt="" />
