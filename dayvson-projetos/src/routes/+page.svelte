@@ -24,8 +24,8 @@
                     </p>
                     <!-- <button>baixar cv</button> -->
                 </div>
-                <div id="img-intro">
-                    <img id="img-intro" src="perfil-2.jpg" alt="" />
+                <div>
+                    <img id="img-intro" src="perfil-3.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -105,6 +105,22 @@
             </button>
 
 
+            <button
+                class="projeto-clicado"
+                onmousedown={() => ($projetos[0].selecionado = 4)}
+            >
+                <CardProjeto
+                    imagem="{$projetos[4]?.imagem ?? ''}"
+                    titulo="{$projetos[4]?.titulo ?? ''}"
+                    subtitulo=" "
+                    descricao="{$projetos[4]?.descricao ?? ''}"
+                    link_repo="{$projetos[4]?.github ?? ''}"
+                    link_info="/projetos"
+                    link_site="{$projetos[4]?.site ?? ''}"
+                />
+            </button>
+
+
         </div>
         <div id="contato">
             <a
@@ -156,7 +172,8 @@
     #img-intro {
         width: 12em;
         height: auto;
-        
+        border: 2px dotted rgb(90, 90, 90);
+        margin-left: 1em;
     }
 
     #nav-menu {

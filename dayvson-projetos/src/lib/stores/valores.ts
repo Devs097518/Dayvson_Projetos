@@ -52,6 +52,16 @@ export const projetos = writable(
             explicacao: 'Este projeto foi desenvolvido com o objetivo de criar uma ferramenta simples e eficiente para encurtar URLs longas. Utilizando JavaScript para a lógica do aplicativo, Express.js e Node.js para o backend, e MongoDB com Mongoose para o armazenamento dos dados, o ENCURTADOR_DE_URL permite que os usuários insiram uma URL longa em uma caixa de entrada e recebam uma versão curta que redireciona para o link original. A aplicação é hospedada na Vercel, garantindo alta disponibilidade e desempenho. O uso do REQBIN facilitou os testes das requisições durante o desenvolvimento. O controle de versão foi gerenciado com Git, assegurando um fluxo de trabalho organizado e eficiente.',
             github: 'https://github.com/Devs097518/encurtador_de_url',
             site: 'encurtador-de-url-omega.vercel.app'
+        },
+        {
+            titulo: 'Lojinha de Chás',
+            imagem: 'lojinha.png',
+            descricao: 'O projeto é uma lojinha fictícia de vender chás. O usuário pode se cadastrar e, na sua conta, adicionar itens na sacola e poder fazer o pedido. Os itens ficam salvos na sua conta.',
+            tecnologias: ['JavaScript', 'Express.js', 'Node.js','MongoDB', 'Mongoose' ,'Vercel','Git','Sveltekit','Svelte'],
+            funcionalidades: ['Salvar na conta do usuário, suas informações e itens da sacola, que são acessadas do banco de dados'],
+            explicacao: 'Na tela inicial temos uma interface simples e agradável, que convida o usuário a explorar o site. Na página de produtos é onde os itens da loja estão colocados, para o usuário escolher e colocar na sacola. Na página da sacola é onde os itens da sacola do usuário estão. E na parte da conta é onde o usuário pode criar uma conta com suas informações, ou, com o código da sua conta, acessar ela. Os itens adicionados na sacola ficam salvos na conta do usuário, para que ele possa fazer o pedido quando quiser.',
+            github: 'https://github.com/Devs097518/Lojinha-de-Chas',
+            site: 'https://lojinha-de-chas.vercel.app'
         }
     ]
 );
